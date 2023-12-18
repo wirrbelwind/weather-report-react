@@ -6,7 +6,7 @@ export const ThemeSwitcher = () => {
 	const { t } = useTranslation('translation')
 	const { colorMode, toggleColorMode } = useColorMode()
 
-	const buttonAlt = colorMode === 'light' ? t('switchToDarkTheme') : t('switchToLightTheme')
+	const buttonAlt = colorMode === 'light' ? t('theme.switchToDarkTheme') : t('theme.switchToLightTheme')
 
 	return (
 		<IconButton
