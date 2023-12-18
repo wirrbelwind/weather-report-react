@@ -1,4 +1,10 @@
 {
-	"switchToLightTheme": "Switch to light light theme",
-	"switchToDarkTheme": "Switch to light dark theme"
+	"theme": {
+		"switchToLightTheme": "Switch to light light theme",
+		"switchToDarkTheme": "Switch to light dark theme"
+	},
+	"languages": {
+		"ukrainian": "Ukrainian",
+		"english": "English"
+	}
 }
