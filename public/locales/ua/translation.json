@@ -1,0 +1,10 @@
+{
+	"theme": {
+		"switchToLightTheme": "Перемкнутися на світлу тему",
+	"switchToDarkTheme": "Перемкнутися на темну тему"
+	},
+	"languages": {
+		"ukrainian": "Українська",
+		"english": "Англійська"
+	}
+}
