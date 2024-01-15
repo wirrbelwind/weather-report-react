@@ -1,2 +1,2 @@
-export { actions, storeReducer } from './model/store'
-export { weatherApi, useGetPokemonByNameQuery } from './api/weatherApi'
+export { slice as weatherSlice} from './model/slice'
+export { weatherApi, useGetWeatherForecastQuery } from './api/weatherApi'

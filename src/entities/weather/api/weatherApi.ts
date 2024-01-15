@@ -1,13 +1,14 @@
 // Need to use the React-specific entry point to import createApi
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { API_URL } from '../config/API_URL'
+import { WeatherForecastResponse } from '../types/WeatherForecastResponse'
 
 // Define a service using a base URL and expected endpoints
 export const weatherApi = createApi({
 	reducerPath: 'weather-api',
 	baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
 	endpoints: (builder) => ({
-		getWeatherForecast: builder.query({
+		getWeatherForecast: builder.query<WeatherForecastResponse, void>({
 			query: () => ({
 				url: 'forecast',
 				params: {

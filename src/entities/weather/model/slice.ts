@@ -3,7 +3,7 @@ import { CurrentWeather } from "../types/CurrentWeather";
 
 const initialState: CurrentWeather = {}
 
-const store = createSlice({
+export const slice = createSlice({
 	name: 'current-weather',
 	initialState,
 	reducers: {
@@ -12,5 +12,3 @@ const store = createSlice({
 		}
 	},
 })
-
-export const {reducer, actions} = store
