@@ -12,9 +12,9 @@ export const weatherApi = createApi({
 			query: () => ({
 				url: 'forecast',
 				params: {
-					"latitude": 46.4857,
+					"latitude": 16.4857,
 					"longitude": 30.7438,
-					"current": ["temperature_2m", "relative_humidity_2m", "apparent_temperature", "rain", "showers", "snowfall", "wind_speed_10m"],
+					"current": ["temperature_2m", "relative_humidity_2m", "apparent_temperature", "is_day", "precipitation", "rain", "showers", "snowfall", "weather_code", "wind_speed_10m"],
 					"hourly": "temperature_2m",
 					"daily": ["temperature_2m_max", "temperature_2m_min", "sunrise", "sunset", "daylight_duration", "sunshine_duration", "uv_index_max", "wind_speed_10m_max", "wind_gusts_10m_max"],
 					"timeformat": "unixtime",
