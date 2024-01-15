@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { weatherApi, weatherSlice } from 'entities/weather'
+import { weatherApi } from 'entities/weather'
+import { userSettingsSlice } from 'entities/user-settings'
 
 export const globalStore = configureStore({
 	reducer: {
-		currentWeather: weatherSlice.reducer,
 		[weatherApi.reducerPath]: weatherApi.reducer,
+		[userSettingsSlice.name]: userSettingsSlice.reducer
 	},
 	middleware: (getDefaultMiddleware) =>
 		getDefaultMiddleware().concat(weatherApi.middleware),
