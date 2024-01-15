@@ -7,30 +7,5 @@
 		"ukrainian": "Ukrainian",
 		"english": "English"
 	},
-	"weatherParams": {
-		"temperature": "Temperature",
-		"humidity": "Humidity",
-		"precipitation": "Precipitation",
-		"rain": "Rain",
-		"showers": "Showers",
-		"snowfall": "Snowfall",
-		"wind_speed": "Wind speed",
-		"daylightDuration": "Daylight duration",
-		"sunrise": "Sunrise",
-		"sunset": "Sunset",
-		"sunshineDuration": "Sunshine Duration",
-		"time": "Time",
-		"windGusts": "Wind gusts",
-		"windSpeed": "Wind speed"
-	},
-	"weatherTypes": {
-		"0-19": "Sunny",
-		"20-29": "Ice fog or thunderstorm",
-		"30-39": "Duststorm, sandstorm, drifting or blowing snow",
-		"40-49": "Fog or ice fog at the time of observation",
-		"50-59": "Drizzle",
-		"60-69": "Rain",
-		"70-79": "Solid precipitation not in showers",
-		"80-100": "Showery precipitation, or precipitation with current or recent thunderstorm"
-	}
+	"coordsWarning": "The forecast provider Opem Meteo may not have near enough coordinates of your placement."
 }
