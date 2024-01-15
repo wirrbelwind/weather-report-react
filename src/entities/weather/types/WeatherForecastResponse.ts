@@ -23,7 +23,7 @@ export interface WeatherForecastResponse {
 		weather_code: string
 	}
 	current: {
-		time: number
+		time: string
 		interval: number
 		temperature_2m: number
 		relative_humidity_2m: number
@@ -51,7 +51,7 @@ export interface WeatherForecastResponse {
 
 	}
 	daily: {
-		time: number[],
+		time: string[],
 		temperature_2m_min: number[],
 		temperature_2m_max: number[]
 		sunrise: number[],
@@ -68,7 +68,7 @@ export interface WeatherForecastResponse {
 		temperature_2m: string
 	}
 	hourly: {
-		time: number[]
+		time: string[]
 		temperature_2m: number[],
 	}
 }
