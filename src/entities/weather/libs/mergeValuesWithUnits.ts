@@ -1,28 +1,22 @@
-import { WeatherForecastResponse } from '../types/WeatherForecastResponse'
+// import { WeatherKey } from "../types/WeatherKey"
 
 type Property = {
-	value: number
+	value: unknown
 	unit: string
 }
-type WeatherCategory = 'current' | 'daily' | 'hourly'
 
-export const mergeValuesWithUnits = (data: WeatherForecastResponse) => {
-	const result: Record<WeatherCategory, Record<string, Property>> = {
-		current: {},
-		daily: {},
-		hourly: {},
-	}
+export const mergeValuesWithUnits = (values: Record<string, unknown>, units: Record<string, string>): Record<string, Property> => {
 
-	const currentKeys = Object.keys(data.current)
-	currentKeys.forEach(key => {
-		result.current[key] = {
-			value: data.current[key],
-			unit: data.current_units[key]
-		}
-	})
+	const result: Record<string, Property> = {}
 
-	// dailyKeys = Object.keys(data.daily)
+	// TODO: refactor
+	// Object.keys(values).forEach(key => {
+	// 	const propKey = key
+	// 	result[key] = {
+	// 		value: values[propKey],
+	// 		unit: units[propKey]
+	// 	}
+	// })
 
 	return result
 }
-
