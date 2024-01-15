@@ -1,19 +1,22 @@
+import { WeatherType } from '../types/WeatherType'
 
 // NOTE:
 // this helper was made considering WMO codes
 // the source of codes: https://www.nodc.noaa.gov/archive/arc0021/0002199/1.1/data/0-data/HTML/WMO-CODE/WMO4677.HTM
 
-export const getWeatherType = (wmoCode: number) => {
-	if(wmoCode < 0 || wmoCode > 99) {
-		return ''
+export const getWeatherType = (wmoCode: number): WeatherType => {
+	if (wmoCode < 0 || wmoCode > 100) {
+		return 'undefined'
 	}
 
-	if(wmoCode <= 19) return 'Sunny'
-	if(wmoCode <= 29) return 'Ice fog or thunderstorm'
-	if(wmoCode <= 39) return 'Duststorm, sandstorm, drifting or blowing snow'
-	if(wmoCode <= 49) return 'Fog or ice fog at the time of observation'
-	if(wmoCode <= 59) return 'Drizzle'
-	if(wmoCode <= 69) return 'Rain'
-	if(wmoCode <= 79) return 'Solid precipitation not in showers'
-	if(wmoCode <= 99) return 'Showery precipitation, or precipitation with current or recent thunderstorm'
+	if (wmoCode <= 19) return '0-19'
+	if (wmoCode <= 29) return '20-29'
+	if (wmoCode <= 39) return '30-39'
+	if (wmoCode <= 49) return '40-49'
+	if (wmoCode <= 59) return '50-59'
+	if (wmoCode <= 69) return '60-69'
+	if (wmoCode <= 79) return '70-79'
+	if (wmoCode <= 100) return '80-100'
+
+	return 'undefined'
 }

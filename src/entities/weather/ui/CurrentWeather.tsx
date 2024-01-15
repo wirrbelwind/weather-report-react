@@ -14,19 +14,19 @@ export const CurrentWeather = (props: CurrentWeatherProps) => {
 	return (
 		<Card {...cardProps}>
 			<CardBody>
-				<HStack gap={2}>
+				<HStack gap={2} align="flex-start">
 					<Icon
-						size="9rem"
+						size="13rem"
 					/>
 					<Box>
 						<Text fontSize="5rem" fontWeight="bold">{temperature}</Text>
-						<Text>{weatherType}</Text>
+						<Text fontSize="3.7rem">{weatherType}</Text>
 					</Box>
 				</HStack>
 			</CardBody>
 			{
 				slotBottom && (
-					<CardFooter>
+					<CardFooter display="block">
 						{slotBottom}
 					</CardFooter>
 				)
