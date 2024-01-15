@@ -1,17 +1,27 @@
 // Need to use the React-specific entry point to import createApi
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { API_URL } from '../config/API_URL'
 
 // Define a service using a base URL and expected endpoints
 export const weatherApi = createApi({
 	reducerPath: 'weather-api',
-	baseQuery: fetchBaseQuery({ baseUrl: 'https://api.open-meteo.com/v1/' }),
+	baseQuery: fetchBaseQuery({ baseUrl: API_URL }),
 	endpoints: (builder) => ({
-		getPokemonByName: builder.query({
-			query: () => `forecast?latitude=46.4857&longitude=30.7438&current=temperature_2m,relative_humidity_2m,apparent_temperature,rain,showers,snowfall,wind_speed_10m&hourly=temperature_2m&timezone=auto`,
+		getWeatherForecast: builder.query({
+			query: () => ({
+				url: 'forecast',
+				params: {
+					"latitude": 46.4857,
+					"longitude": 30.7438,
+					"current": ["temperature_2m", "relative_humidity_2m", "apparent_temperature", "rain", "showers", "snowfall", "wind_speed_10m"],
+					"hourly": "temperature_2m",
+					"daily": ["temperature_2m_max", "temperature_2m_min", "sunrise", "sunset", "daylight_duration", "sunshine_duration", "uv_index_max", "wind_speed_10m_max", "wind_gusts_10m_max"],
+					"timeformat": "unixtime",
+					"timezone": "auto"
+				}
+			})
 		}),
 	}),
 })
 
-// Export hooks for usage in functional components, which are
-// auto-generated based on the defined endpoints
-export const { useGetPokemonByNameQuery } = weatherApi
+export const { useGetWeatherForecastQuery } = weatherApi
