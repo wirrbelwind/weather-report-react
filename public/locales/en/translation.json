@@ -6,5 +6,21 @@
 	"languages": {
 		"ukrainian": "Ukrainian",
 		"english": "English"
+	},
+	"weather": {
+		"temperature": "Temperature",
+		"humidity": "Humidity",
+		"precipitation": "Precipitation",
+		"rain": "Rain",
+		"showers": "Showers",
+		"snowfall": "Snowfall",
+		"wind_speed": "Wind speed",
+		"daylightDuration": "Daylight duration",
+		"sunrise": "Sunrise",
+		"sunset": "Sunset",
+		"sunshineDuration": "Sunshine Duration",
+		"time": "Time",
+		"windGusts": "Wind gusts",
+		"windSpeed": "Wind speed"
 	}
 }
