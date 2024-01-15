@@ -18,6 +18,9 @@ export interface WeatherForecastResponse {
 		showers: string
 		snowfall: string
 		wind_speed_10m: string
+		is_day: string
+		precipitation: string
+		weather_code: string
 	}
 	current: {
 		time: number
@@ -28,6 +31,10 @@ export interface WeatherForecastResponse {
 		showers: number
 		snowfall: number
 		wind_speed_10m: number
+		apparent_temperature: number
+		is_day: number
+		precipitation: number
+		weather_code: number
 	}
 	// daily
 	daily_units: {
