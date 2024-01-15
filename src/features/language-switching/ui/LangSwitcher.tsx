@@ -1,26 +1,36 @@
 import { useTranslation } from "react-i18next";
-import { Select, SingleValue } from 'chakra-react-select'
 import { options } from "../consts/options";
-import { Option } from "../model/types/Option";
-import { localizeOptions } from "../model/libs/localizeOptions";
+import { Select, SelectProps } from "@chakra-ui/react";
 
-export const LangSwitcher = () => {
-	const { t, i18n } = useTranslation()
+export const LangSwitcher = (selectProps: Omit<SelectProps, 'onChange'>) => {
+	const { t, i18n } = useTranslation('langs')
 
-	const handleChange = (selectedOption: SingleValue<Option>) => {
-		if (!selectedOption) {
+	const handleChange: React.ChangeEventHandler<HTMLSelectElement> = e => {
+		const lang = e.target.value
+		if (!lang) {
 			return;
 		}
 
-		i18n.changeLanguage(selectedOption.value)
+		i18n.changeLanguage(lang)
 	}
 
-	const localizedOptions = localizeOptions(options, t)
+	const localizedOptions = options.map(({ label, value }) => ({
+		label: t(label),
+		value,
+		selected: value === i18n.language
+	}))
 
 	return (
 		<Select
-			options={localizedOptions}
+			{...selectProps}
 			onChange={handleChange}
-		/>
+		>
+			{
+				localizedOptions.map(opt => (
+					<option  {...opt}/>
+				))
+			}
+		</Select>
+
 	)
 }

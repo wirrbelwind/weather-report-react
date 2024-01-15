@@ -7,5 +7,6 @@ export interface RawOption {
 
 export interface Option {
 	label: string
-	value: string
+	value: string,
+	selected?: boolean
 }
