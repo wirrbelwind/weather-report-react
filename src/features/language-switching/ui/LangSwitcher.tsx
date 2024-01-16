@@ -24,10 +24,11 @@ export const LangSwitcher = (selectProps: Omit<SelectProps, 'onChange'>) => {
 		<Select
 			{...selectProps}
 			onChange={handleChange}
+			fontSize="1.3rem"
 		>
 			{
 				localizedOptions.map(opt => (
-					<option  {...opt}/>
+					<option   {...opt}/>
 				))
 			}
 		</Select>

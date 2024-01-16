@@ -9,7 +9,7 @@ export const Header = () => {
 			<Container size="md">
 				<HStack justifyContent="flex-end" gap="1rem">
 					<ThemeSwitcher />
-					<LangSwitcher />
+					<LangSwitcher maxW="15%" />
 				</HStack>
 			</Container>
 		</Box>
