@@ -3,11 +3,13 @@ import header from './header.json'
 import weatherParams from './weatherParams.json'
 import weatherTypes from './weatherTypes.json'
 import langs from './langs.json'
+import week from './week.json'
 
 export const ua = {
 	translation: globalTranslation,
 	header,
 	weatherParams,
 	weatherTypes,
-	langs
+	langs,
+	week
 } as const

@@ -1,1 +1,0 @@
-export { ForecastInfo } from './ui/ForecastInfo'

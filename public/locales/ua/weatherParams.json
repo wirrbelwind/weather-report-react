@@ -6,12 +6,15 @@
 	"showers": "Зливи {{value, number}} {{unit, string}}",
 	"snowfall": "Снігопад {{value, number}} {{unit, string}}",
 	"wind_speed": "Швидкість вітру {{value, number}} {{unit, string}}",
-	"daylightDuration": "Тривалість світлового дня {{value, number}} {{unit, string}}",
-	"sunrise": "Схід сонця {{value, number}} {{unit, string}}",
-	"sunset": "Захід сонця {{value, number}} {{unit, string}}",
-	"sunshineDuration": "Тривалість сонячного сяйва {{value, number}} {{unit, string}}",
+	"daylightDuration": "Тривалість світлового дня {{value, number}} годин(-и)",
+	"sunset": "Захід сонця в {{value, string}}",
+	"sunshineDuration": "Тривалість сонячного сяйва {{value, number}} годин(-и)",
 	"time": "Час {{value, number}} {{unit, string}}",
 	"windGusts": "Пориви вітру {{value, number}} {{unit, string}}",
-	"windSpeed": "Швидкість вітру {{value, number}} {{unit, string}}",
-	"seemsLike": "Відчувається як {{value, number}} {{unit, string}}"
+	"windSpeed": "Швидкість вітру {{value, number}} км/год",
+	"apparentTemperature": "Відчувається як {{value, number}} {{unit, string}}",
+	"day": "День",
+	"night": "Нiч",
+	"temperatureMinMax": "Температура {{min, number}} — {{max, number}} {{units, string}}",
+	"sunrise": "Світанок в {{value, string}}"
 }

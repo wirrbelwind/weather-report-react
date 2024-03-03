@@ -16,8 +16,7 @@ export const LangSwitcher = (selectProps: Omit<SelectProps, 'onChange'>) => {
 
 	const localizedOptions = options.map(({ label, value }) => ({
 		label: t(label),
-		value,
-		selected: value === i18n.language
+		value
 	}))
 
 	return (
@@ -25,10 +24,11 @@ export const LangSwitcher = (selectProps: Omit<SelectProps, 'onChange'>) => {
 			{...selectProps}
 			onChange={handleChange}
 			fontSize="1.3rem"
+			defaultValue={i18n.language}
 		>
 			{
 				localizedOptions.map(opt => (
-					<option   {...opt}/>
+					<option key={opt.value} {...opt} />
 				))
 			}
 		</Select>

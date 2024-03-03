@@ -3,5 +3,14 @@
 		"switchToLightTheme": "Switch to light light theme",
 		"switchToDarkTheme": "Switch to light dark theme"
 	},
-	"coordsWarning": "The forecast provider Opem Meteo may not have near enough coordinates of your placement."
+	"coordsWarning": "The forecast provider Opem Meteo may not have near enough coordinates of your placement.",
+	"addressInputPlaceholder": "Country, region, city, or address",
+	"about": "About the application",
+	"showAdvancedWheatherInfo": "Show advanced weather info",
+	"includeToday": "Include Today",
+	"openRepo": "Open repository",
+	"contactMe": "Contact me",
+	"copied": "Copied",
+	"copy": "Copy",
+	"telegram": "Telegram: "
 }

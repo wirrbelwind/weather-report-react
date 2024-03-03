@@ -1,6 +1,10 @@
 import { State } from "../types/State";
-import { defaultCoordinates } from "./defaultCoordinates";
 
 export const initialState: State = {
-	coordinates: defaultCoordinates
+	coordinates: {
+		// London's coordinates
+		lattitude: 51.509865,
+		longtitude: -0.118092
+	},
+	showAdvancedWeatherData: false
 }

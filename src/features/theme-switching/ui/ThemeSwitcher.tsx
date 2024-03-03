@@ -1,19 +1,17 @@
-import { Icon, IconButton, useColorMode } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
+import { Icon, IconButton, IconButtonProps, useColorMode } from "@chakra-ui/react";
 import { BsSun } from "react-icons/bs";
 
-export const ThemeSwitcher = () => {
-	const { t } = useTranslation('translation')
-	const { colorMode, toggleColorMode } = useColorMode()
+interface ThemeSwitcherProps extends Omit<IconButtonProps, 'aria-label'> { }
 
-	const buttonAlt = colorMode === 'light' ? t('theme.switchToDarkTheme') : t('theme.switchToLightTheme')
+export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
+	const { toggleColorMode } = useColorMode()
 
 	return (
 		<IconButton
-			aria-label={buttonAlt}
+			{...props}
+			aria-label='switch theme'
 			icon={<Icon as={BsSun} />}
 			onClick={toggleColorMode}
 		/>
-
 	)
 }

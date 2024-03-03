@@ -61,6 +61,7 @@ export interface WeatherForecastResponse {
 		uv_index_max: number[]
 		wind_speed_10m_max: number[]
 		wind_guests_10m_max: number[]
+		weather_code: number
 	}
 	// hour
 	hourly_units: {

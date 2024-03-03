@@ -1,1 +1,0 @@
-export { CurrentWeatherInfo } from './ui/CurrentWeatherInfo'

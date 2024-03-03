@@ -1,18 +1,37 @@
 {
-	"temperature": "Temperature {{value, number}} {{unit, string}}",
-	"humidity": "Humidity {{value, number}} {{unit, string}}",
-	"precipitation": "Precipitation {{value, number}} {{unit, string}}",
-	"rain": "Rain {{value, number}} {{unit, string}}",
-	"showers": "Showers {{value, number}} {{unit, string}}",
-	"snowfall": "Snowfall {{value, number}} {{unit, string}}",
-	"wind_speed": "Wind speed {{value, number}} {{unit, string}}",
-	"daylightDuration": "Daylight duration {{value, number}} {{unit, string}}",
-	"sunrise": "Sunrise {{value, number}} {{unit, string}}",
-	"sunset": "Sunset {{value, number}} {{unit, string}}",
-	"sunshineDuration": "Sunshine Duration {{value, number}} {{unit, string}}",
-	"time": "Time {{value, number}} {{unit, string}}",
-	"windGusts": "Wind gusts {{value, number}} {{unit, string}}",
-	"windSpeed": "Wind speed {{value, number}} {{unit, string}}",
-	"seemsLike": "Seems like {{value, number}} {{unit, string}}"
-
+	"units": {
+		"km/h": "km/h",
+		"h": "hours"
+	},
+	"sunrise": "Sunrise at",
+	"windSpeed": "Wind speed",
+	"apparentTemperature": "Apparent temperature",
+	"day": "Day",
+	"night": "Night",
+	"temperature": "Temperature",
+	"humidity": "Humidity",
+	"precipitation": "Precipitation",
+	"rain": "Rain",
+	"showers": "Showers",
+	"snowfall": "Snowfall",
+	"daylightDuration": "Daylight duration",
+	"sunset": "Sunset at",
+	"sunshineDuration": "Sunshine duration",
+	"time": "Time",
+	"withValue": {
+		"temperature": "Temperature {{value, number}} {{unit, string}}",
+		"humidity": "Humidity {{value, number}} {{unit, string}}",
+		"precipitation": "Precipitation {{value, number}} {{unit, string}}",
+		"rain": "Rain {{value, number}} {{unit, string}}",
+		"showers": "Showers {{value, number}} {{unit, string}}",
+		"snowfall": "Snowfall {{value, number}} {{unit, string}}",
+		"windSpeed": "Wind speed {{value, number}} {{unit, string}}",
+		"daylightDuration": "Daylight duration {{value, number}} hours",
+		"sunrise": "Sunrise at {{value, string}}",
+		"sunset": "Sunset at {{value, string}}",
+		"sunshineDuration": "Sunshine duration {{value, number}} hours",
+		"time": "Time {{value, number}} {{unit, string}}",
+		"temperatureMinMax": "Temperature {{min, number}} — {{max, number}} {{units, string}}",
+		"apparentTemperature": "Apparent temperature {{value, number}} {{unit, string}}"
+	}
 }

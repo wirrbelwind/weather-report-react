@@ -1,0 +1,1 @@
+export { OtherDaysWeatherInfo } from './ui/OtherDaysWeatherInfo'

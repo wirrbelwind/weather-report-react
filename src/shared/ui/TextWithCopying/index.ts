@@ -1,0 +1,1 @@
+export { TextWithCopying } from './TextWithCopying'
