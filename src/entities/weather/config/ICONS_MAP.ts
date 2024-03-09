@@ -1,5 +1,6 @@
 import { WeatherType } from '../types/WeatherType'
 import { IconType } from 'react-icons'
+
 import { WiDaySunny } from "react-icons/wi";
 import { WiDayCloudyWindy } from "react-icons/wi";
 import { WiDayThunderstorm } from "react-icons/wi";
@@ -10,7 +11,7 @@ import { WiNightRainWind } from "react-icons/wi";
 import { WiNightThunderstorm } from "react-icons/wi";
 import { WiCloud } from "react-icons/wi";
 
-export const iconsMap: Record<WeatherType, IconType> = {
+export const ICONS_MAP: Record<WeatherType, IconType> = {
 	'0-19': WiDaySunny,
 	'20-29': WiDayCloudyWindy,
 	'30-39': WiDayThunderstorm,

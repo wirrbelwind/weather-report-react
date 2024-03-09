@@ -1,12 +1,9 @@
-import { Box, BoxProps, Button, CircularProgress, HStack, IconButton, Text, Tooltip } from "@chakra-ui/react"
+import { Box, BoxProps, Button, CircularProgress, HStack, IconButton, Text } from "@chakra-ui/react"
 import { PrimaryWeatherCard, useCurrentWeather } from "entities/weather"
 import { SearchInputLocation, useCoordinates } from "features/location-input"
-import { useTranslation } from "react-i18next";
-import { LuInfo, LuLocate } from "react-icons/lu";
+import { LuLocate } from "react-icons/lu";
 
 export const TodayWeatherInfo = (boxProps: BoxProps) => {
-	const { t } = useTranslation()
-
 	const {
 		coordinates,
 		onBackToUserCoordinates,
@@ -17,7 +14,6 @@ export const TodayWeatherInfo = (boxProps: BoxProps) => {
 	const {
 		data: {
 			WeatherIcon,
-			timezone,
 			weather,
 			weatherType,
 			advanced
@@ -68,19 +64,9 @@ export const TodayWeatherInfo = (boxProps: BoxProps) => {
 					weatherType={weatherType}
 					Icon={WeatherIcon}
 					advanced={advanced}
-					slotBottom={
-						<HStack align='center'>
-							{timezone && (
-								<Text fontSize="2rem">{timezone}</Text>
-							)}
-							<Tooltip label={t('coordsWarning')}>
-								<LuInfo size="2rem" />
-							</Tooltip>
-						</HStack>
-					}
+					transition="3s"
 				/>
 			)}
 		</Box>
 	)
 }
-

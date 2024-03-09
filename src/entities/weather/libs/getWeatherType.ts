@@ -1,9 +1,8 @@
 import { WeatherType } from '../types/WeatherType'
 
-// NOTE:
-// this helper was made considering WMO codes
-// the source of codes: https://www.nodc.noaa.gov/archive/arc0021/0002199/1.1/data/0-data/HTML/WMO-CODE/WMO4677.HTM
-
+/**
+ * @description Get the category of WMO code, according to resource https://www.nodc.noaa.gov/archive/arc0021/0002199/1.1/data/0-data/HTML/WMO-CODE/WMO4677.HTM
+ */
 export const getWeatherType = (wmoCode: number | undefined): WeatherType => {
 	if(wmoCode === undefined) {
 		return 'undefined'

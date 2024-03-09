@@ -1,5 +1,5 @@
 import { useAppDispatch } from "app/providers/redux";
-import { userSettingsSlice } from './slice'
+import { userSettingsSlice } from './userSettingsSlice'
 
 export const useRequestCoordinates = () => {
 	const dispatch = useAppDispatch()
@@ -10,5 +10,5 @@ export const useRequestCoordinates = () => {
 			lattitude: coords.latitude,
 			longtitude: coords.longitude
 		}))
-	});
+	})
 }

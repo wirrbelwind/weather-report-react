@@ -1,21 +1,14 @@
-import { Box, BoxProps, HStack } from "@chakra-ui/react"
+import { Box, BoxProps, Grid, HStack } from "@chakra-ui/react"
 import { SecondaryWeatherCard } from "entities/weather"
 import { useOtherDaysWeather } from "../model/useOtherDaysWeather"
 import { useAppSelector } from "app/providers/redux"
-import { useDaysView } from "../model/useDaysView"
 import { useIncludeToday } from "../model/useIncludeToday"
-import { DaysViewOptions } from "./DaysViewOptions"
 import { SwitchIncludeToday } from "./SwitchIncludeToday"
 
 interface OtherDaysWeatherInfoProps extends BoxProps { }
 
 export const OtherDaysWeatherInfo = (props: OtherDaysWeatherInfoProps) => {
-	const {  showAdvancedWeatherData } = useAppSelector(state => state["user-settings"])
-
-	const {
-		view,
-		changeView
-	} = useDaysView()
+	const { showAdvancedWeatherData } = useAppSelector(state => state["user-settings"])
 
 	const {
 		isTodayIncluded,
@@ -29,19 +22,15 @@ export const OtherDaysWeatherInfo = (props: OtherDaysWeatherInfoProps) => {
 	return (
 		<Box>
 			<HStack gap='2rem'>
-				{/* <DaysViewOptions
-					view={view}
-					changeView={changeView}
-				/> */}
 				<SwitchIncludeToday
 					isTodayIncluded={isTodayIncluded}
 					toggle={toggleIncludeToday}
 				/>
 			</HStack>
-			
-			<Box
+
+			<Grid
 				gap="1rem"
-				display={view === 'columns' ? "grid" : 'flex'}
+				templateColumns={showAdvancedWeatherData ? "1fr" : "repeat(4, 25%)"}
 				{...props}
 			>
 				{
@@ -56,17 +45,19 @@ export const OtherDaysWeatherInfo = (props: OtherDaysWeatherInfoProps) => {
 
 						return (
 							<SecondaryWeatherCard
+								key={day.time.value}
 								fullDate={day.time.value}
 								minTemperature={day.temperature_2m_min.value}
 								maxTemperature={day.temperature_2m_max.value}
 								temperatureUnits={day.temperature_2m_min.units}
 								weatherCode={day.weather_code.value}
 								advanced={advanced}
+								isMini={!showAdvancedWeatherData}
 							/>
 						)
 					})
 				}
-			</Box>
+			</Grid>
 		</Box>
 	)
 }

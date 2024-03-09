@@ -8,7 +8,7 @@ export const LangSwitcher = (selectProps: Omit<SelectProps, 'onChange'>) => {
 	const handleChange: React.ChangeEventHandler<HTMLSelectElement> = e => {
 		const lang = e.target.value
 		if (!lang) {
-			return;
+			return
 		}
 
 		i18n.changeLanguage(lang)

@@ -61,11 +61,12 @@ export const PrimaryWeatherCard = (props: PrimaryWeatherCardProps) => {
 								unit: temperatureUnits
 							})}
 						</Text>
-						<Text fontWeight="bold">
-							{t('withValue.humidity', {
-								value: humidity.value,
-								unit: humidity.units
-							})}
+						<Text fontWeight="bold">{`
+								${t('withValue.humidity', {
+							value: humidity.value
+						})}
+						${humidity.units}
+							`}
 						</Text>
 
 						<Box>
@@ -79,50 +80,49 @@ export const PrimaryWeatherCard = (props: PrimaryWeatherCardProps) => {
 							{
 								advanced?.precipitation && (
 									<Text>
-										{t('precipitation', {
+										{`
+										${t('withValue.precipitation', {
 											value: advanced.precipitation.value,
-											unit: advanced.precipitation.units
 										})}
+										${t('units.mm')}
+										`}
 									</Text>
 								)
 							}
 							{
 								advanced?.rain && (
 									<Text>
-										{t('rain', {
-											value: advanced.rain.value,
-											unit: advanced.rain.units
-										})}
+										{`${t('withValue.rain', {
+											value: advanced.rain.value
+										})} ${t('units.mm')}`}
 									</Text>
 								)
 							}
 							{
 								advanced?.showers && (
 									<Text>
-										{t('showers', {
-											value: advanced.showers.value,
-											unit: advanced.showers.units
-										})}
+										{`${t('withValue.showers', {
+											value: advanced.showers.value
+										})} ${t('units.mm')}`}
 									</Text>
 								)
 							}
 							{
 								advanced?.snowfall && (
 									<Text>
-										{t('snowfall', {
+										{`${t('withValue.snowfall', {
 											value: advanced.snowfall.value,
 											unit: advanced.snowfall.units
-										})}
+										})} ${t('units.cm')}`}
 									</Text>
 								)
 							}
 							{
 								advanced?.windSpeed && (
 									<Text>
-										{t('windSpeed', {
+										{`${t('withValue.windSpeed', {
 											value: advanced.windSpeed.value,
-											unit: advanced.windSpeed.units
-										})}
+										})} ${t('units.km/h')}`}
 									</Text>
 								)
 							}

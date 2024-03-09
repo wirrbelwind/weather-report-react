@@ -1,14 +1,14 @@
-import { Button, HStack, Text, useClipboard } from "@chakra-ui/react"
+import { Button, HStack, StackProps, Text, useClipboard } from "@chakra-ui/react"
 import { useTranslation } from "react-i18next"
 import { FaCopy } from "react-icons/fa6"
 import { LuCopyCheck } from "react-icons/lu"
 
-interface TextWithCopyingProps {
+interface TextWithCopyingProps extends StackProps {
 	text: string
 }
 
 export const TextWithCopying = (props: TextWithCopyingProps) => {
-	const { text } = props
+	const { text, ...containerProps } = props
 
 	const { t } = useTranslation()
 	const { onCopy, hasCopied } = useClipboard(text)
@@ -16,10 +16,10 @@ export const TextWithCopying = (props: TextWithCopyingProps) => {
 	return (
 		<HStack
 			onClick={onCopy}
+			{...containerProps}
 		>
 			<Text
 				cursor="pointer"
-				textDecor="underline"
 			>
 				{text}
 			</Text>

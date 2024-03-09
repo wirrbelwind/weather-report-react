@@ -1,6 +1,6 @@
 import { defineStyleConfig } from '@chakra-ui/react'
 
-export const container = defineStyleConfig({
+export const Container = defineStyleConfig({
 	sizes: {
 		md: {
 			maxW: "90rem",

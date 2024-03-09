@@ -1,1 +1,1 @@
-export { userSettingsSlice } from './model/slice'
+export { userSettingsSlice } from './model/userSettingsSlice'

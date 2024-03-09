@@ -73,6 +73,3 @@ export interface WeatherForecastResponse {
 		temperature_2m: number[],
 	}
 }
-
-
-

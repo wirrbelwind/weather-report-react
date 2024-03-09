@@ -1,4 +1,4 @@
-import { FormControl, FormControlProps, FormLabel, FormLabelProps, Switch, SwitchProps } from "@chakra-ui/react"
+import { FormControlProps, FormLabel, FormLabelProps, HStack, Switch, SwitchProps } from "@chakra-ui/react"
 import { useAppDispatch, useAppSelector } from "app/providers/redux"
 import { userSettingsSlice } from "entities/user-settings"
 import { ChangeEvent, useCallback } from "react"
@@ -17,7 +17,6 @@ export const AdvancedWeatherSwitching = (props: AdvancedWeatherSwitchingProps) =
 		...containerProps
 	} = props
 
-
 	const showAdvancedWeatherData = useAppSelector(state => state["user-settings"].showAdvancedWeatherData)
 
 	const { setShowAdvancedWeatherData } = userSettingsSlice.actions
@@ -32,8 +31,7 @@ export const AdvancedWeatherSwitching = (props: AdvancedWeatherSwitchingProps) =
 	)
 
 	return (
-		<FormControl
-			display='inline-flex'
+		<HStack
 			alignItems='center'
 			{...containerProps}
 		>
@@ -51,6 +49,6 @@ export const AdvancedWeatherSwitching = (props: AdvancedWeatherSwitchingProps) =
 				onChange={handleChange}
 				{...switchProps}
 			/>
-		</FormControl>
+		</HStack>
 	)
 }

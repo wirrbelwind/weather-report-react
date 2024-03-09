@@ -1,6 +1,6 @@
 import { Coordinates } from "shared/types/Coordinates";
 
-export interface State {
+export interface UserSettingsState {
 	coordinates: Coordinates
 	showAdvancedWeatherData: boolean
 }

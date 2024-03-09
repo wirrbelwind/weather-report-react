@@ -1,6 +1,6 @@
-import { State } from "../types/State";
+import { UserSettingsState } from "../types/UserSettingsState";
 
-export const initialState: State = {
+export const initialState: UserSettingsState = {
 	coordinates: {
 		// London's coordinates
 		lattitude: 51.509865,

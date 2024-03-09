@@ -10,7 +10,7 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
 		<IconButton
 			{...props}
 			aria-label='switch theme'
-			icon={<Icon as={BsSun} />}
+			icon={<Icon as={BsSun} w="2rem" h="2rem" />}
 			onClick={toggleColorMode}
 		/>
 	)
